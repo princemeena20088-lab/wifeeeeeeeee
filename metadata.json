@@ -1,0 +1,6 @@
+{
+  "name": "For Ishika — Our Love Story & Scrapbook",
+  "description": "An intimate, romantic and interactive love scrapbook made with all my heart for my girlfriend Ishika, celebrating our most precious memories and forever love.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --font-handwriting: 'Caveat', cursive;
+  --font-cursive: 'Sacramento', cursive;
+  --font-romantic: 'Playfair Display', serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --color-romantic-pink-50: #FFF5F7;
+  --color-romantic-pink-100: #FFE4EC;
+  --color-romantic-pink-200: #FCCEE0;
+  --color-romantic-pink-300: #FBA0C4;
+  --color-romantic-pink-400: #F472B6;
+  --color-romantic-pink-500: #EC4899;
+  --color-romantic-rose: #E11D48;
+  --color-romantic-cream: #FFFDF9;
+  --color-romantic-lavender: #F5EEFF;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-3deg);
+  }
+}
+
+@keyframes butterfly-wing {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.25);
+  }
+}
+
+@keyframes pulse-heart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes spin-record {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+@keyframes gentle-wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 5s ease-in-out infinite 1s;
+}
+
+.animate-pulse-heart {
+  animation: pulse-heart 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-record 12s linear infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.animate-wave-hand {
+  transform-origin: 70% 70%;
+  animation: gentle-wave 2s ease-in-out infinite;
+}
+
+.washi-tape {
+  background: rgba(254, 240, 245, 0.85);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border-left: 2px dashed rgba(244, 114, 182, 0.4);
+  border-right: 2px dashed rgba(244, 114, 182, 0.4);
+}
+
+.paper-pattern {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(#FBCFE8 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+.lined-paper {
+  background-color: #FFFDF9;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    #FCE7F3 28px
+  );
+  line-height: 28px;
+}
+
+/* Custom scrollbar for cute aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #F9A8D4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F472B6;
+}
