@@ -22,7 +22,8 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
   isPlaying,
   setIsPlaying,
 }) => {
-  const defaultAudioSrc = '/assets/aistudio/Aankhon_Se_Batana___Dikshant_Viral_Song_Official_Video__1__8b21c8ae.mp3';
+  const base = import.meta.env.BASE_URL;
+  const defaultAudioSrc = `${base}assets/aistudio/Aankhon_Se_Batana___Dikshant_Viral_Song_Official_Video__1__8b21c8ae.mp3`;
   const [audioSrc, setAudioSrc] = useState<string>(defaultAudioSrc);
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);
@@ -180,7 +181,7 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
       {/* Floating music notes and tiny hearts when playing */}
       {isPlaying && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <span className="absolute text-2xl top-12 left-12 animate-float text-pink-400">🎶</span>
+          <span className="absolute text-2xl top-12 left-12 animate-float text-pink-400">🎼</span>
           <span className="absolute text-xl top-24 right-16 animate-float-delayed text-rose-400">🎵</span>
           <span className="absolute text-2xl bottom-16 left-20 animate-float text-pink-500">💕</span>
           <span className="absolute text-xl bottom-12 right-24 animate-float-delayed text-rose-300">🌸</span>
@@ -204,7 +205,7 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
             <Sparkles className="w-4 h-4 animate-spin-slow" />
           </div>
           <p className="font-['Caveat'] text-2xl sm:text-3xl text-rose-600 font-bold max-w-lg mx-auto">
-            &ldquo;Some feelings don&apos;t need words... just listen with your heart. 🥹💗&rdquo;
+            &ldquo;Some feelings don&apos;t need words... just listen with your heart. 🥺💗&rdquo;
           </p>
         </div>
 
@@ -222,7 +223,7 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
               A whisper for Ishika 💌
             </p>
             <p className="font-['Caveat'] text-xl sm:text-2xl text-rose-800 font-bold leading-snug">
-              &ldquo;Ye song bhi hamari memories ka ek chhota sa part hai. Bas aankhon se samajh jana... ❤️🫶🏻&rdquo;
+              &ldquo;Ye song bhi hamari memories ka ek chhota sa part hai. Bas aankhon se samajh jana... ❤️🫶&rdquo;
             </p>
           </div>
         )}

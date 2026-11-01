@@ -25,6 +25,7 @@ interface PhotoItem {
 }
 
 export const PolaroidGallery: React.FC = () => {
+  const base = import.meta.env.BASE_URL;
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
   const [isVideoMuted, setIsVideoMuted] = useState<boolean>(false);
@@ -32,7 +33,7 @@ export const PolaroidGallery: React.FC = () => {
   const defaultPhotos: PhotoItem[] = [
     {
       id: 1,
-      src: '/assets/aistudio/photo_1_2026-11-01_12-55-37_10b80228.jpg',
+      src: `${base}assets/aistudio/photo_1_2026-11-01_12-55-37_10b80228.jpg`,
       caption: '28 October · Our 1st cheek kiss with sweet lipstick marks 💋',
       date: '28 October Memory',
       rotation: '-rotate-2',
@@ -40,7 +41,7 @@ export const PolaroidGallery: React.FC = () => {
     },
     {
       id: 2,
-      src: '/assets/aistudio/photo_2_2026-11-01_12-55-37_503189e2.jpg',
+      src: `${base}assets/aistudio/photo_2_2026-11-01_12-55-37_503189e2.jpg`,
       caption: 'The brightest, most precious smile that captured my heart ☀️💕',
       date: '12 October Meetup',
       rotation: 'rotate-2',
@@ -48,7 +49,7 @@ export const PolaroidGallery: React.FC = () => {
     },
     {
       id: 3,
-      src: '/assets/aistudio/photo_3_2026-11-01_12-55-37_fce7fb99.jpg',
+      src: `${base}assets/aistudio/photo_3_2026-11-01_12-55-37_fce7fb99.jpg`,
       caption: 'Me with our cute little cat friend 🐱',
       date: 'Cute Cat Date',
       rotation: '-rotate-1',
@@ -56,7 +57,7 @@ export const PolaroidGallery: React.FC = () => {
     },
     {
       id: 4,
-      src: '/assets/aistudio/photo_4_2026-11-01_12-55-37_fefff6a9.jpg',
+      src: `${base}assets/aistudio/photo_4_2026-11-01_12-55-37_fefff6a9.jpg`,
       caption: 'Bas tu hi chahiye mera pyara sa baccha ❤️',
       date: 'Forever Together',
       rotation: 'rotate-3',
@@ -83,7 +84,6 @@ export const PolaroidGallery: React.FC = () => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
-    const newItems: PhotoItem[] = [];
     Array.from(files).forEach((file, index) => {
       const reader = new FileReader();
       reader.onload = (event) => {
@@ -174,7 +174,7 @@ export const PolaroidGallery: React.FC = () => {
           <div className="relative w-full max-w-[280px] sm:max-w-[310px] aspect-[9/16] rounded-2xl overflow-hidden shadow-md bg-stone-900 border-2 border-rose-200 group">
             <video
               ref={videoRef}
-              src="/assets/aistudio/video_2026-11-01_12-55-37_ece40f93.mp4"
+              src={`${base}assets/aistudio/video_2026-11-01_12-55-37_ece40f93.mp4`}
               playsInline
               loop
               className="w-full h-full object-cover"
