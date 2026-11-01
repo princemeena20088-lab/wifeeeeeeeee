@@ -166,6 +166,8 @@ const MemoryCard: React.FC<MemoryCardProps> = ({
 };
 
 export const TimelineSection: React.FC = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section className="relative py-16 px-4 max-w-4xl mx-auto">
       {/* Section Header */}
@@ -221,12 +223,12 @@ export const TimelineSection: React.FC = () => {
           ]}
         />
 
-        {/* Memory 2: 12 October — Our First Meetup 🥹💗 */}
+        {/* Memory 2: 12 October — Our First Meetup 🥺💗 */}
         <MemoryCard
           memoryIndex={2}
           date="12 October"
           title="12 October"
-          subtitle="— Our First Meetup 🥹💗"
+          subtitle="— Our First Meetup 🥺💗"
           tapeColor="stripes"
           illustration={
             <div className="py-2 flex flex-col items-center">
@@ -236,7 +238,7 @@ export const TimelineSection: React.FC = () => {
                 <div className="bg-white p-2 pb-4 rounded-xl shadow-md border border-pink-200 rotate-2 max-w-[155px]">
                   <div className="w-28 h-28 rounded-lg overflow-hidden bg-rose-50 border border-rose-100">
                     <img
-                      src="/assets/aistudio/photo_2_2026-11-01_12-55-37_503189e2.jpg"
+                      src={`${base}assets/aistudio/photo_2_2026-11-01_12-55-37_503189e2.jpg`}
                       alt="Best Smile - Our 12 October Meetup"
                       className="w-full h-full object-cover"
                     />
@@ -297,12 +299,12 @@ export const TimelineSection: React.FC = () => {
           ]}
         />
 
-        {/* Memory 4: 28 October — Our First Cheek Kiss 🥺💋 */}
+        {/* Memory 4: 28 October — Our First Cheek Kiss 🫠💋 */}
         <MemoryCard
           memoryIndex={4}
           date="28 October"
           title="28 October"
-          subtitle="— Our First Cheek Kiss 🥺💋"
+          subtitle="— Our First Cheek Kiss 🫠💋"
           tapeColor="dots"
           illustration={
             <div className="py-2 flex flex-col items-center">
@@ -312,7 +314,7 @@ export const TimelineSection: React.FC = () => {
                 <div className="bg-white p-2 pb-4 rounded-xl shadow-md border border-rose-300 -rotate-2 max-w-[155px]">
                   <div className="w-28 h-28 rounded-lg overflow-hidden bg-rose-50 border border-rose-200">
                     <img
-                      src="/assets/aistudio/photo_1_2026-11-01_12-55-37_10b80228.jpg"
+                      src={`${base}assets/aistudio/photo_1_2026-11-01_12-55-37_10b80228.jpg`}
                       alt="1st Cheek Kiss - Ishika & Priyansh"
                       className="w-full h-full object-cover"
                     />
